@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:go_router_example/layout/default_layout.dart';
+import 'package:go_router_example/screen/3_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -17,6 +18,14 @@ class HomeScreen extends StatelessWidget {
             },
             child: Text(
               'Screen One (GO)',
+            ),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              context.goNamed(ThreeScreen.routeName);
+            },
+            child: Text(
+              'Screen Three (GO)',
             ),
           ),
         ],
